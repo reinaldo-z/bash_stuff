@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#copy this script to: /usr/bin/
+#execute the command: 
+	# rmtex 
+#to remove temporary files afther compile with latex  
+
+if [[ -n `ls | grep converted-to.pdf` ]]; then
+	rm *converted*.pdf 
+fi
+
+# rm *.aux *.fdb* *.log *.sync* 
+
+if [[ -n `ls | grep .aux` ]]; then
+	rm *.aux
+fi
+if [[ -n `ls | grep .fdb` ]]; then
+	rm *.fdb*
+fi
+if [[ -n `ls | grep .log` ]]; then
+	rm *.log
+fi
+if [[ -n `ls | grep .sync` ]]; then
+	rm *.sync*
+fi
