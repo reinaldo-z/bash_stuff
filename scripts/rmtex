@@ -9,6 +9,10 @@ if [[ -n `ls | grep converted-to.pdf` ]]; then
 	rm *converted*.pdf 
 fi
 
+if [[ -n `ls | grep inc | grep eps` ]]; then
+	rm *-inc.eps 
+fi
+
 # rm *.aux *.fdb* *.log *.sync* 
 
 if [[ -n `ls | grep .aux` ]]; then

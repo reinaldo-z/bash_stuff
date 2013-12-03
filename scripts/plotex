@@ -1,0 +1,7 @@
+#!/bin/bash
+
+declare -a tex_files=`ls *.tex`
+for i in ${tex_files[@]}; do
+	pdflatex $i
+done
+rm *.aux *.eps *converted* *.log *.tex
